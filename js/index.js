@@ -155,10 +155,10 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
     switch (this.id) {
       case 'one':
-        repplyFunction(2000, 3500, "Duna sucks");
+        repplyFunction(2000, 3500, "Currently in Bradford, UK");
         break;
       case 'two':
-        repplyFunction(2000, 3500, "Duna NE SUCKVA");
+        repplyFunction(2000, 3500, "onsectetur adipiscing elit, sed do eiusmod tempor incididuntonsectetur adipiscing elit, sed do eiusmod tempor incididunt");
         break;
       case 'three':
         repplyFunction(2000, 3500, "Sut, consectetur adipiscing elit, sed do eiusmod tempor incididunt");
@@ -167,13 +167,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
         repplyFunction(2000, 3500, "adipiscing elit, sed do eiusmod tempor incididun");
         break;
       case 'five':
-        repplyFunction(2000, 3500, "Duna NE SUCKVA");
+        repplyFunction(2000, 3500, "onsectetur adipiscing elit, sed do eiusmod tempor incididunt");
         break;
       case 'six':
-        repplyFunction(2000, 3500, "adipiscing elit, sed do eiusmod tempor incididun");
+        repplyFunction(2000, 3500, "onsectetur adipiscing elit, sed do eiusmod tempor incididuntonsectetur adipiscing elit, sed do eiusmod tempor incididuntonsectetur adipiscing elit, sed do eiusmod tempor incididunt");
         break;
       case 'seven':
-        repplyFunction(2000, 3500, "adipiscing elit, sed do eiusmod tempor incididun");
+        repplyFunction(2000, 3500, "I've been through a lot ...");
         break;
       case 'eight':
         repplyFunction(2000, 3500, "adipiscing elit, sed do eiusmod tempor incididun");
