@@ -1011,7 +1011,7 @@ iframe{
     color: #ffff;
     padding: 1rem;
     margin: 0.5rem auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 5rem;
     outline: none;
@@ -1020,14 +1020,17 @@ iframe{
   }
 
   .baloon-disabled {
-    background-color: black;
-    opacity: 0.2;
+    background-color: var(--main-light-blue);
     color: #ffff;
     padding: 1rem;
-    font-size: 1.2rem;
+    margin: 0.5rem auto;
+    font-size: 1.1rem;
     border: none;
     border-radius: 5rem;
     outline: none;
+    cursor: pointer;
+    text-align: left;
+    opacity: 0.2;
   }
 
   /* EMOJIS */
