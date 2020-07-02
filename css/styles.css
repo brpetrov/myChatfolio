@@ -688,13 +688,13 @@ iframe{
 
   .green-dot {
     margin-top: 0.2rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #42b72a;
   }
 
   .name p {
     color: #868686;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   .weather {
