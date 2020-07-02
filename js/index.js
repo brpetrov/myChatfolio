@@ -155,7 +155,7 @@ $(document).ready(function() {
 
 
 
-  $('.thumb').on('mousedown', function() {
+  $('.thumb').on('mousedown touchstart', function() {
     var $thumbRight =
       $('<div/>', {
         "class": "thumb-right"
@@ -167,12 +167,12 @@ $(document).ready(function() {
     $thumbRight.addClass('anim-wiggle anim-wiggle2');
     $(".chatbox").append($thumbRight);
     $thumbRight.animate({
-      fontSize: '10rem'
+      fontSize: '8rem'
     }, 3000);
     $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
 
 
-    $(this).on('mouseup', function() {
+    $(this).on('mouseup touchend', function() {
       $thumbRight.removeClass('anim-wiggle anim-wiggle2');
       $thumbRight.stop();
       $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
@@ -209,7 +209,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $(".chatbox").append($leftDiv);
       $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
-    }, 1500);
+    }, 1200);
   });
 
   // HIDE EMOJI BLOCK ON click outside div
@@ -235,6 +235,12 @@ $(document).ready(function() {
       }, 500);
     }
   });
+
+  $('.go-back').on('click',function(){
+    infoContainer.hide('slide', {
+      direction: 'right'
+    }, 500);
+  })
 
   // Show info block on click
   $('.info').on('click', function() {
