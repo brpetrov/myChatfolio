@@ -37,6 +37,13 @@ body {
   font-weight: 400;
 }
 
+iframe{
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 1rem 1rem;
+}
+
 .screen {
   height: 100vh;
   width: 100%;
@@ -165,14 +172,14 @@ body {
   font-size: 2.1rem;
 }
 
-.go-back{
+.go-back-info{
   display: none;
 }
 
 .info-block {
   background-color: #fff;
   border-left: 0.05rem solid #e7e7e7;
-  width: 25%;
+  width: 30%;
   height: 95%;
   position: absolute;
   right: 0;
@@ -401,13 +408,17 @@ body {
   bottom: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 5% 5% auto 5% 5%;
+  grid-template-columns: 5% auto 5% 5%;
   padding: 1.5rem;
   font-size: 2rem;
   grid-gap: 0.5rem;
   text-align: center;
   color: var(--main-light-blue);
   background: #fff;
+}
+
+.form-button{
+  cursor: pointer;
 }
 
 .msg {
@@ -421,13 +432,6 @@ body {
   cursor: pointer;
 }
 
-.msg .fas {
-  position: absolute;
-  left: 90%;
-  position: relative;
-  font-size: 1.5rem;
-  color: var(--main-light-blue);
-}
 
 .emoji-btn {
   cursor: pointer;
@@ -450,6 +454,10 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.go-back-question{
+  display: none;
+}
+
 .headings {
   color: var(--main-blue);
   width: 100%;
@@ -458,13 +466,25 @@ body {
   text-align: center;
 }
 
+.sections{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 .personal {
   padding: 1rem;
-  width: 50%;
+  width: 100%;
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   border-right: 0.1rem solid var(--main-blue);
+}
+
+.work-related{
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: auto auto;
 }
 
 .baloon {
@@ -476,6 +496,7 @@ body {
   border-radius: 5rem;
   outline: none;
   cursor: pointer;
+  text-align: left;
 }
 
 .baloon-disabled {
@@ -656,7 +677,9 @@ body {
   }
 
   .name {
-    display: none;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
   }
 
   .letter-anim:hover {
@@ -664,18 +687,17 @@ body {
   }
 
   .green-dot {
-    display: none;
+    font-size: 0.5rem;
+    color: #42b72a;
   }
 
   .name p {
-    display: none;
+    color: #868686;
+    font-size: 0.5rem;
   }
 
   .weather {
-    text-align: center;
-    font-weight: normal;
-    font-size: 0.9rem;
-    line-height: 0.2;
+  display: none;
   }
 
   #wicon {
@@ -747,7 +769,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
   }
 
-  .go-back{
+  .go-back-info{
     padding-left: 1rem;
     font-size: 1.5rem;
     display: block;
@@ -876,7 +898,7 @@ body {
     bottom: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: auto 10% 10%;
+    grid-template-columns: 10% auto 10% 10%;
     padding: 0.5rem;
     font-size: 2rem;
     grid-gap: 0.5rem;
@@ -903,28 +925,24 @@ body {
     cursor: pointer;
   }
 
-  .msg .fas {
-    position: absolute;
-    left: 90%;
-    position: relative;
-    font-size: 1.5rem;
-    color: var(--main-light-blue);
-  }
 
   .emoji-btn {
     cursor: pointer;
   }
 
+/* FORM */
+
+
   /* QUSTIONS BLOCK */
   .question-block {
-    width: 95%;
+    width: 100%;
     height: 20rem;
     background: #fff;
     margin: 0 auto;
     position: absolute;
     bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
+    left: 0;
+    right: 0;
     z-index: 10;
     overflow: auto;
     display: none;
@@ -932,8 +950,22 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .headings {
+  .go-back-question{
+    padding: 0.5rem 0.8rem;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    position: fixed;
     color: var(--main-light-blue);
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    border: 0.05rem solid gray;
+  }
+
+  .headings {
+    color: #fff;
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -943,15 +975,33 @@ body {
     margin-bottom: 1rem;
   }
 
-  .headings h1{
+  .heading{
     padding: 0.5rem;
     border: 0.05rem solid gray;
+    border-radius: 4px;
+    background-color: var(--main-blue);
+  }
+
+
+
+  .sections{
+    display:block;
+    padding: 0.5rem;
+    margin: 0 auto;
   }
 
   .personal {
     padding: 1rem;
     width: 100%;
-    display: block;
+    display: none;
+    grid-gap: 0.5rem;
+    border-right: none;
+  }
+
+  .work-related{
+    padding: 1rem;
+    width: 100%;
+    display: none;
     grid-gap: 0.5rem;
     border-right: none;
   }
@@ -966,6 +1016,7 @@ body {
     border-radius: 5rem;
     outline: none;
     cursor: pointer;
+    text-align: left;
   }
 
   .baloon-disabled {
