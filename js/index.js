@@ -327,9 +327,12 @@ if(isMobile===false){
 }
 
 
-$('.form-button').on('click touch',function(e){
+$('.form-button').one('click touch',function(e){
 e.preventDefault();
-$('iframe').show();
+
+ $(".chatbox").append('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK_R2vatfEbNOD3XqdTLV4olXz1WrREEACI_qRgCX8Vd_Cdg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0"></iframe>');
+ $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+ $(this).css("opacity","0.5");
 })
 
 });
