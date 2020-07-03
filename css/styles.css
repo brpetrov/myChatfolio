@@ -383,7 +383,7 @@ iframe{
 
 .typing .dot {
   animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
-  background-color: gray; //rgba(20,105,69,.7);
+  background-color: gray;
   border-radius: 50%;
   height: 7px;
   margin-right: 4px;
@@ -411,17 +411,17 @@ iframe{
 @keyframes mercuryTypingAnimation {
   0% {
     transform: translateY(0px);
-    background-color: gray; // rgba(20,105,69,.7);
+    background-color: gray;
   }
 
   28% {
     transform: translateY(-7px);
-    background-color: gray; //rgba(20,105,69,.4);
+    background-color: gray;
   }
 
   44% {
     transform: translateY(0px);
-    background-color: gray; //rgba(20,105,69,.2);
+    background-color: gray;
   }
 }
 
@@ -942,7 +942,7 @@ iframe{
     top: 7rem;
     padding: 1rem 2rem;
     overflow: auto;
-    height: 72%;
+    height: 75%;
     font-weight: 400;
   }
 
