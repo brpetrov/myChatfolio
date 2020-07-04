@@ -232,7 +232,7 @@ $(document).ready(function() {
     $thumbRight.addClass('anim-wiggle anim-wiggle2');
     $(".chatbox").append($thumbRight);
     $thumbRight.animate({
-      fontSize: '8rem'
+      fontSize: '7rem'
     }, 3000);
     $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
 
