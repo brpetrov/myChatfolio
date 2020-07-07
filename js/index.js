@@ -200,8 +200,8 @@ $(document).ready(function() {
       secondRepplyFunction(4100,5500, "Other than that I've worked as an office assistant and as an agent in Call Centre")
         break;
       case '2':
-        repplyFunction(2000, 3600, "As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. ");
-        secondRepplyFunction(4200,5900, "So I started creating websites myself.")
+        repplyFunction(1300, 2700, "You can see my resume <a href='BoyanPetrov_CV.pdf' download target='_blank'>Here</a>");
+
         break;
       case '3':
         repplyFunction(1300, 3300, "I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python");
@@ -211,6 +211,10 @@ $(document).ready(function() {
           repplyFunction(1200, 3000, "You can see all my projects on <a href='https://github.com/brpetrov?tab=repositories'>Github</a>");
           secondRepplyFunction(4000,5900, "Or you can also visit my <a href='https://codepen.io/dashboard/'>Codepen</a> or <a href='https://vercel.com/dashboard/projects'>Vercel</a> for more user-friendly environment. They are not fully completed but I am working on it :)")
           break;
+          case '5':
+            repplyFunction(2000, 3600, "As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. ");
+            secondRepplyFunction(4200,5900, "So I started creating websites myself.")
+            break;
     }
 
   });
