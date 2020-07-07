@@ -178,14 +178,14 @@ $(document).ready(function() {
         break;
       case 'two':
         repplyFunction(2000, 3500, "I would say that some of my strengths are that I'm a self motivated, detail-oriented and hard-working.");
-        secondRepplyFunction(4000,5600, "As for my weaknesses: I am impatient, not having a coffee in the morning and cats 🐈❤️")
+        secondRepplyFunction(4000, 5600, "As for my weaknesses: I am impatient, not having a coffee in the morning and cats 🐈❤️")
         break;
       case 'three':
         repplyFunction(1000, 2100, "I currently live in Bradford, UK but I'm willing to relocate");
         break;
       case 'four':
-      repplyFunction(800, 1500, "Easy");
-      secondRepplyFunction(1900,3600, "I will be established as a full stack developer and I will be working on some creative and in depth projects")
+        repplyFunction(800, 1500, "Easy");
+        secondRepplyFunction(1900, 3600, "I will be established as a full stack developer and I will be working on some creative and in depth projects")
         break;
       case 'five':
         repplyFunction(2000, 3500, "In a perfect world, my life would be: <br> gym->code->videogames->sleep ");
@@ -196,25 +196,24 @@ $(document).ready(function() {
 
         // WORK RELATED
       case '1':
-      repplyFunction(1000, 3200, "For the past few months I've been freelancing as a web developer.<br> -In 2019 I was a teaching assistant <br> -I also participated in an online bootcamp for coding");
-      secondRepplyFunction(4100,5500, "Other than that I've worked as an office assistant and as an agent in Call Centre")
+        repplyFunction(1000, 3200, "For the past few months I've been freelancing as a web developer.<br> -In 2019 I was a teaching assistant <br> -I also participated in an online bootcamp for coding");
+        secondRepplyFunction(4100, 5500, "Other than that I've worked as an office assistant and as an agent in Call Centre")
         break;
       case '2':
         repplyFunction(1300, 2700, "You can see my resume <a href='BoyanPetrov_CV.pdf' download target='_blank'>Here</a>");
-
         break;
       case '3':
-        repplyFunction(1300, 3300, "I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python");
-        secondRepplyFunction(4200,5900, "You can see all my dev skills if you click on the <span class='fas fa-info-circle'><span> button at top-right.")
+        repplyFunction(1200, 3000, "<div class='polaroid'> <a href='https://brpetrov.github.io/children-playground-Bulgaria/index.html' target='_blank'><img src='img/krustnika.jpg'></a></div> <div class='polaroid'> <a href='https://brpetrov.github.io/GameTime/' target='_blank'><img src='img/game-time.jpg'></a></div>");
+        secondRepplyFunction(4000, 5900, "<div class='polaroid'> <a href='https://brpetrov.github.io/TinDog-Tutorial/' target='_blank'><img src='img/tindog.jpg'></a></div> <div class='polaroid'> <a href='https://brpetrov.github.io/potrfolio/' target='_blank'><img src='img/portfolio.jpg'></a></div>")
         break;
-        case '4':
-          repplyFunction(1200, 3000, "You can see all my projects on <a href='https://github.com/brpetrov?tab=repositories'>Github</a>");
-          secondRepplyFunction(4000,5900, "Or you can also visit my <a href='https://codepen.io/dashboard/'>Codepen</a> or <a href='https://vercel.com/dashboard/projects'>Vercel</a> for more user-friendly environment. They are not fully completed but I am working on it :)")
-          break;
-          case '5':
-            repplyFunction(2000, 3600, "As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. ");
-            secondRepplyFunction(4200,5900, "So I started creating websites myself.")
-            break;
+      case '4':
+        repplyFunction(1300, 3300, "I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python");
+        secondRepplyFunction(4200, 5900, "You can see all my dev skills if you click on the <span class='fas fa-info-circle'><span> button at top-right.")
+        break;
+      case '5':
+        repplyFunction(2000, 3600, "As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. ");
+        secondRepplyFunction(4200, 5900, "So I started creating websites myself.")
+        break;
     }
 
   });

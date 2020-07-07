@@ -426,6 +426,18 @@ iframe {
   }
 }
 
+.polaroid{
+  width: 100%;
+  display: inline;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+.polaroid img{
+  width: 40%;
+  border-radius: 5px;
+}
+
 /* BOTTOM MESSAGE SECTION */
 .message-section {
   position: fixed;
@@ -983,6 +995,12 @@ iframe {
     margin: 0.6rem 0.5rem 0.6rem auto;
     font-size: 1.8rem;
   }
+
+  .polaroid img{
+    width: 35%;
+    border-radius: 5px;
+  }
+
 
   .message-section {
     grid-template-columns: 10% auto 10% 10%;
