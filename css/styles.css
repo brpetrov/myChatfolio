@@ -30,7 +30,7 @@ ul {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -80,7 +80,7 @@ iframe {
 .img img {
   width: 70%;
   border-radius: 50%;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .img img:hover {
@@ -257,7 +257,8 @@ iframe {
   margin-left: 1rem;
 }
 
-.gray-dot, .black-dot {
+.gray-dot,
+.black-dot {
   font-size: 0.9rem;
 }
 
@@ -267,8 +268,38 @@ iframe {
   top: 10rem;
   padding: 1rem 2rem;
   overflow: auto;
-  height: 67%;
+  height: 70%;
   font-weight: 400;
+}
+
+.my-projects {
+  width: 100%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 28% 28% 28%;
+  display: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 1rem 1rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .first-msg {
@@ -426,14 +457,14 @@ iframe {
   }
 }
 
-.polaroid{
+.polaroid {
   width: 100%;
   display: inline;
   text-align: center;
   margin: 0 0.5rem;
 }
 
-.polaroid img{
+.polaroid img {
   width: 40%;
   border-radius: 5px;
 }
@@ -942,6 +973,13 @@ iframe {
     height: 75%;
   }
 
+  .my-projects {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
   .left-msg {
     padding: 1rem 1.5rem;
     margin: 0.5rem auto 0.6rem 0.5rem;
@@ -996,11 +1034,10 @@ iframe {
     font-size: 1.8rem;
   }
 
-  .polaroid img{
+  .polaroid img {
     width: 35%;
     border-radius: 5px;
   }
-
 
   .message-section {
     grid-template-columns: 10% auto 10% 10%;
@@ -1155,6 +1192,13 @@ iframe {
     font-size: 2rem;
   }
 
+  .my-projects {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
   .left-msg {
     padding: 1rem 1.5rem;
     margin: 0.5rem auto 0.6rem 0.5rem;
@@ -1209,7 +1253,6 @@ iframe {
     font-size: 1rem;
   }
 
-
   .go-back-question {
     font-size: 1.2rem;
     bottom: 1.5rem;
@@ -1248,7 +1291,6 @@ iframe {
     margin: 0 0.6rem;
     font-size: 1.2rem;
   }
-
 
   @keyframes blinking {
     0% {
@@ -1298,8 +1340,7 @@ iframe {
   }
 }
 
-@media (min-width:601px) and (max-width: 1100px) {
-
+@media (min-width: 601px) and (max-width: 1100px) {
   .blue-alert {
     display: none;
   }
@@ -1373,6 +1414,12 @@ iframe {
     height: 75%;
   }
 
+  .my-projects {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 
   .left-msg {
     padding: 1.1rem 1.6rem;
@@ -1397,7 +1444,6 @@ iframe {
     line-height: 1.1;
     font-size: 1.1rem;
   }
-
 
   .message-section {
     grid-template-columns: 10% auto 10% 10%;
