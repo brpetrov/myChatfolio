@@ -272,7 +272,7 @@ $(document).ready(function () {
         repplyFunction(
           1300,
           3300,
-          'I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python'
+          'I’m proficient in HTML, CSS and JavaScript, PHP and I have mid-level proficiency in C/C#, SQL/MySQL and Python'
         );
         secondRepplyFunction(
           4200,
