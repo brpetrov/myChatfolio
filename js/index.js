@@ -264,7 +264,7 @@ $(document).ready(function () {
         repplyFunction(
           1300,
           2700,
-          'Here are few of my recent projects: <i>(scroll down)</i>'
+          'Here are few of my recent projects: <i>(scroll down <i class="fas fa-arrow-down"></i>)</i>'
         );
         setTimeout(function () {
           myProjects.css('display', 'grid');
