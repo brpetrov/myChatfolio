@@ -15,39 +15,39 @@ $(document).ready(function () {
     isMobile = false;
   }
 
-  const myProjects = $(".my-projects");
+  const myProjects = $('.my-projects');
 
   // variable for time
   let time = new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
+    hour: '2-digit',
+    minute: '2-digit',
   });
-  let container = $(".question-block");
-  let infoContainer = $(".info-block");
+  let container = $('.question-block');
+  let infoContainer = $('.info-block');
 
   // HIDE INFO BLOCK
   $(infoContainer).hide();
 
   // Hide Emojo block at start
-  $(".emoji-block").hide();
+  $('.emoji-block').hide();
 
   // GREETING MESSAGE
-  $(".first-msg").css("display", "none");
+  $('.first-msg').css('display', 'none');
   setTimeout(function () {
-    $(".chat-bubble-left").hide();
-    $(".first-msg").css("display", "table");
-    $(".time-left").html(time);
+    $('.chat-bubble-left').hide();
+    $('.first-msg').css('display', 'table');
+    $('.time-left').html(time);
   }, 2500);
 
   // SCROLL All THE WAY DOWN
-  $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+  $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
 
   // Show question block on click
-  $("#msg-btn").on("click", function () {
+  $('#msg-btn').on('click', function () {
     $(container).show(
-      "slide",
+      'slide',
       {
-        direction: "down",
+        direction: 'down',
       },
       500
     );
@@ -58,143 +58,143 @@ $(document).ready(function () {
     // if the target of the click isn't the container
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide(
-        "slide",
+        'slide',
         {
-          direction: "down",
+          direction: 'down',
         },
         300
       );
     }
   });
 
-  $(".go-back-question").on("click", function () {
+  $('.go-back-question').on('click', function () {
     container.hide(
-      "slide",
+      'slide',
       {
-        direction: "down",
+        direction: 'down',
       },
       500
     );
   });
 
   // Send message
-  $(".baloon").on("click", function () {
-    var $newDiv = $("<div/>").attr("class", "right-msg");
+  $('.baloon').on('click', function () {
+    var $newDiv = $('<div/>').attr('class', 'right-msg');
     $newDiv.html($(this).html());
     $(this)
-      .prop("disabled", "true")
-      .switchClass("baloon", "baloon-disabled", 500);
+      .prop('disabled', 'true')
+      .switchClass('baloon', 'baloon-disabled', 500);
     container.hide(
-      "slide",
+      'slide',
       {
-        direction: "down",
+        direction: 'down',
       },
       300
     );
 
     setTimeout(function () {
-      $(".chatbox").append($newDiv);
-      $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
-      $(".chatbox").append($bubblesLeft);
+      $('.chatbox').append($newDiv);
+      $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
+      $('.chatbox').append($bubblesLeft);
     }, 300);
   });
 
   if (isMobile == true) {
-    $(".personal-heading").on("click", function () {
-      $(".personal").show();
-      $(".work-related").hide();
-      $(this).css("opacity", "0.5");
-      $(".work-related-heading").css("opacity", "0.9");
+    $('.personal-heading').on('click', function () {
+      $('.personal').show();
+      $('.work-related').hide();
+      $(this).css('opacity', '0.5');
+      $('.work-related-heading').css('opacity', '0.9');
     });
 
-    $(".work-related-heading").on("click", function () {
-      $(".personal").hide();
-      $(".work-related").show();
-      $(this).css("opacity", "0.5");
-      $(".personal-heading").css("opacity", "0.9");
+    $('.work-related-heading').on('click', function () {
+      $('.personal').hide();
+      $('.work-related').show();
+      $(this).css('opacity', '0.5');
+      $('.personal-heading').css('opacity', '0.9');
     });
   }
 
   // REPLY message
 
-  $("button").on("click", function () {
-    var $newDiv = $("<div/>").attr("class", "left-msg");
-    var $secondDiv = $("<div/>").attr("class", "left-msg-block");
-    var $timeDiv = $("<div/>", {
-      class: "time-left",
+  $('button').on('click', function () {
+    var $newDiv = $('<div/>').attr('class', 'left-msg');
+    var $secondDiv = $('<div/>').attr('class', 'left-msg-block');
+    var $timeDiv = $('<div/>', {
+      class: 'time-left',
     });
     var time = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
+      hour: '2-digit',
+      minute: '2-digit',
     });
     $timeDiv.html(time);
-    var $imgDiv = $("<div/>", {
-      class: "img-left",
+    var $imgDiv = $('<div/>', {
+      class: 'img-left',
     }).append([
-      $("<img/>", {
-        class: "theimg",
-      }).attr("src", "img/boyan.jpg"),
+      $('<img/>', {
+        class: 'theimg',
+      }).attr('src', 'img/boyan.jpg'),
     ]);
 
-    var $bubblesLeft = $("<div/>", {
-      class: "chat-bubble-left",
+    var $bubblesLeft = $('<div/>', {
+      class: 'chat-bubble-left',
     }).append([
-      $("<div/>", {
-        class: "typing",
+      $('<div/>', {
+        class: 'typing',
       }).append([
-        $("<div/>", {
-          class: "dot",
+        $('<div/>', {
+          class: 'dot',
         }),
-        $("<div/>", {
-          class: "dot",
+        $('<div/>', {
+          class: 'dot',
         }),
-        $("<div/>", {
-          class: "dot",
+        $('<div/>', {
+          class: 'dot',
         }),
       ]),
     ]);
 
     function repplyFunction(bubbleTime, messageTime, text) {
       setTimeout(function () {
-        $(".chatbox").append($bubblesLeft);
-        $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+        $('.chatbox').append($bubblesLeft);
+        $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
       }, bubbleTime);
 
       setTimeout(function () {
-        $(".chat-bubble-left").remove();
+        $('.chat-bubble-left').remove();
         $newDiv.html(text);
         $newDiv.append($timeDiv);
         $newDiv.append($imgDiv);
-        $(".chatbox").append($newDiv);
-        $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+        $('.chatbox').append($newDiv);
+        $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
       }, messageTime);
     }
 
     function secondRepplyFunction(bubbleTime, messageTime, text) {
       setTimeout(function () {
-        $(".chatbox").append($bubblesLeft);
-        $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+        $('.chatbox').append($bubblesLeft);
+        $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
       }, bubbleTime);
 
       setTimeout(function () {
-        $(".chat-bubble-left").remove();
+        $('.chat-bubble-left').remove();
         $secondDiv.html(text);
-        $(".chatbox").append($secondDiv);
-        $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+        $('.chatbox').append($secondDiv);
+        $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
       }, messageTime);
     }
 
     switch (this.id) {
       // PERSONAL
 
-      case "one":
+      case 'one':
         repplyFunction(
           2000,
           3500,
-          "I’m a web dev with 4 years of experience creating web apps, sites and games. I like to code things from scratch, and  bring ideas to life in the browser."
+          'I’m a web dev with 4 years of experience creating web apps, sites and games. I like to code things from scratch, and  bring ideas to life in the browser.'
         );
         break;
-      case "two":
+      case 'two':
         repplyFunction(
           2000,
           3500,
@@ -203,45 +203,49 @@ $(document).ready(function () {
         secondRepplyFunction(
           4000,
           5600,
-          "As for my weaknesses: I am impatient, not having a coffee in the morning and cats 🐈❤️"
+          'As for my weaknesses: I am impatient, not having a coffee in the morning and cats 🐈❤️'
         );
         break;
-      case "three":
+      case 'three':
         repplyFunction(
           1000,
           2100,
           "I currently live in Bradford, UK but I'm willing to relocate"
         );
         break;
-      case "four":
-        repplyFunction(800, 1500, "Easy");
+      case 'four':
+        repplyFunction(800, 1500, 'Easy');
         secondRepplyFunction(
           1900,
           3600,
-          "I will be established as a full stack developer and I will be working on some creative and in depth projects"
+          'I will be established as a full stack developer and I will be working on some creative and in depth projects'
         );
         break;
-      case "five":
+      case 'five':
         repplyFunction(
           2000,
           3500,
-          "In a perfect world, my life would be: <br> gym->code->videogames->sleep "
+          'In a perfect world, my life would be: <br> gym->code->videogames->sleep '
         );
         break;
-      case "six":
+      case 'six':
         repplyFunction(
           700,
           1800,
-          "GYM! I love lifting heavy but for the past 3 months all the gyms have been closed... 😔"
+          'GYM! I love lifting heavy but for the past 3 months all the gyms have been closed... 😔'
         );
         break;
 
       // WORK RELATED
-      case "1":
+      case '1':
         repplyFunction(
           1000,
           3200,
-          "For the past few months I've been freelancing as a web developer.<br> -In 2019 I was a teaching assistant <br> -I also participated in an online bootcamp for coding"
+          `For the past few months I've been freelancing as a web developer.
+              <br>
+              <br>- Present: Full Stack Developer at Pi Healthcare, building and managing web platforms for company's clients
+              <br>- In 2019 I was a teaching assistant
+              <br>- I also participated in an online bootcamp for coding`
         );
         secondRepplyFunction(
           4100,
@@ -249,26 +253,26 @@ $(document).ready(function () {
           "Other than that I've worked as an office assistant and as an agent in Call Centre"
         );
         break;
-      case "2":
+      case '2':
         repplyFunction(
           1300,
           2700,
           "You can see my resume <a href='BoyanPetrov_CV.pdf' download target='_blank'>Here</a>"
         );
         break;
-      case "3":
-        repplyFunction(1300, 2700, "Here are few of my recent projects: ");
+      case '3':
+        repplyFunction(1300, 2700, 'Here are few of my recent projects: ');
         setTimeout(function () {
-          myProjects.css("display", "grid");
-          $(".chatbox").append(myProjects);
+          myProjects.css('display', 'grid');
+          $('.chatbox').append(myProjects);
         }, 3300);
 
         break;
-      case "4":
+      case '4':
         repplyFunction(
           1300,
           3300,
-          "I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python"
+          'I’m proficient in HTML, CSS and JavaScript(JQuery), and I have mid-level proficiency in C/C#, SQL and Python'
         );
         secondRepplyFunction(
           4200,
@@ -276,16 +280,16 @@ $(document).ready(function () {
           "You can see all my dev skills if you click on the <span class='fas fa-info-circle'><span> button at top-right."
         );
         break;
-      case "5":
+      case '5':
         repplyFunction(
           2000,
           3600,
-          "As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. "
+          'As a previous owner of an online store.I found the drag-and-drop feature buggy and extremely limited, unless you pay.. '
         );
         secondRepplyFunction(
           4200,
           5900,
-          "So I started creating websites myself."
+          'So I started creating websites myself.'
         );
         break;
     }
@@ -293,67 +297,67 @@ $(document).ready(function () {
 
   // THUMB
 
-  $(".thumb").on("mousedown touchstart", function (e) {
+  $('.thumb').on('mousedown touchstart', function (e) {
     e.preventDefault();
-    var $thumbRight = $("<div/>", {
-      class: "thumb-right",
+    var $thumbRight = $('<div/>', {
+      class: 'thumb-right',
     }).append([
-      $("<i/>", {
-        class: "fas fa-thumbs-up",
+      $('<i/>', {
+        class: 'fas fa-thumbs-up',
       }),
     ]);
-    $thumbRight.addClass("anim-wiggle anim-wiggle2");
-    $(".chatbox").append($thumbRight);
+    $thumbRight.addClass('anim-wiggle anim-wiggle2');
+    $('.chatbox').append($thumbRight);
     $thumbRight.animate(
       {
-        fontSize: "7rem",
+        fontSize: '7rem',
       },
       3000
     );
-    $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+    $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
 
-    $(this).on("mouseup touchend", function (e) {
+    $(this).on('mouseup touchend', function (e) {
       e.preventDefault();
-      $thumbRight.removeClass("anim-wiggle anim-wiggle2");
+      $thumbRight.removeClass('anim-wiggle anim-wiggle2');
       $thumbRight.stop();
-      $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+      $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
     });
   });
 
   //SHOW EMOJI BLOCK
-  $(".emoji-btn").on("click", function () {
-    $(".emoji-block").show(
-      "slide",
+  $('.emoji-btn').on('click', function () {
+    $('.emoji-block').show(
+      'slide',
       {
-        direction: "down",
+        direction: 'down',
       },
       500
     );
   });
 
   // Send EMOJIS
-  var emojiContainer = $(".emoji-block");
-  $(".emoji").on("click", function () {
-    var $newDiv = $("<div/>").attr("class", "right-msg-emoji");
-    var $leftDiv = $("<div/>").attr("class", "left-msg-emoji");
+  var emojiContainer = $('.emoji-block');
+  $('.emoji').on('click', function () {
+    var $newDiv = $('<div/>').attr('class', 'right-msg-emoji');
+    var $leftDiv = $('<div/>').attr('class', 'left-msg-emoji');
     $newDiv.html($(this).html());
     $leftDiv.html($(this).html());
     emojiContainer.hide(
-      "slide",
+      'slide',
       {
-        direction: "down",
+        direction: 'down',
       },
       300
     );
 
     setTimeout(function () {
-      $(".chatbox").append($newDiv);
-      $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+      $('.chatbox').append($newDiv);
+      $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
     }, 300);
 
     setTimeout(function () {
-      $(".chatbox").append($leftDiv);
-      $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
+      $('.chatbox').append($leftDiv);
+      $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
     }, 1200);
   });
 
@@ -366,9 +370,9 @@ $(document).ready(function () {
       emojiContainer.has(e.target).length === 0
     ) {
       emojiContainer.hide(
-        "slide",
+        'slide',
         {
-          direction: "down",
+          direction: 'down',
         },
         300
       );
@@ -384,54 +388,54 @@ $(document).ready(function () {
       infoContainer.has(e.target).length === 0
     ) {
       infoContainer.hide(
-        "slide",
+        'slide',
         {
-          direction: "right",
+          direction: 'right',
         },
         500
       );
     }
   });
 
-  $(".go-back-info").on("click", function () {
+  $('.go-back-info').on('click', function () {
     infoContainer.hide(
-      "slide",
+      'slide',
       {
-        direction: "right",
+        direction: 'right',
       },
       500
     );
   });
 
   // Show info block on click
-  $(".info").on("click", function () {
-    $(".info-block").show(
-      "slide",
+  $('.info').on('click', function () {
+    $('.info-block').show(
+      'slide',
       {
-        direction: "right",
+        direction: 'right',
       },
       500
     );
   });
 
   // remove Blinking Effect on click
-  $(".blink").on("click touch", function () {
-    $(this).removeClass("blink");
+  $('.blink').on('click touch', function () {
+    $(this).removeClass('blink');
   });
 
   if (isMobile === false) {
-    window.addEventListener("load", () => {
+    window.addEventListener('load', () => {
       let long;
       let lat;
-      let tempDes = $(".temp-desc");
-      let location = $(".location");
+      let tempDes = $('.temp-desc');
+      let location = $('.location');
 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
           long = position.coords.longitude;
           lat = position.coords.latitude;
 
-          const proxy = "https://cors-anywhere.herokuapp.com/";
+          const proxy = 'https://cors-anywhere.herokuapp.com/';
 
           const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=a50043b0d7747b34eb686ff3f35c324f`;
           fetch(api)
@@ -442,35 +446,35 @@ $(document).ready(function () {
               console.log(data);
               // SET DOM TO API
               location.html(
-                data.name + " " + Math.round(data.main.temp) + "°C"
+                data.name + ' ' + Math.round(data.main.temp) + '°C'
               );
               var iconcode = data.weather[0].icon;
               var iconurl =
-                "http://openweathermap.org/img/w/" + iconcode + ".png";
-              $("#wicon").attr("src", iconurl);
+                'http://openweathermap.org/img/w/' + iconcode + '.png';
+              $('#wicon').attr('src', iconurl);
             });
         });
       }
     });
   }
 
-  $(".form-button").one("click touch", function (e) {
+  $('.form-button').one('click touch', function (e) {
     e.preventDefault();
 
-    $(".chatbox").append(
+    $('.chatbox').append(
       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK_R2vatfEbNOD3XqdTLV4olXz1WrREEACI_qRgCX8Vd_Cdg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0"></iframe>'
     );
-    $(".chatbox").scrollTop($(".chatbox")[0].scrollHeight);
-    $(this).css("opacity", "0.5");
+    $('.chatbox').scrollTop($('.chatbox')[0].scrollHeight);
+    $(this).css('opacity', '0.5');
   });
 
   // Show contacts BLOCK
-  $(".call").on("click", function () {
-    $(".contact-block").fadeToggle(300);
+  $('.call').on('click', function () {
+    $('.contact-block').fadeToggle(300);
   });
 
   // HIDE EMOJI BLOCK ON click outside div
-  var contactContainer = $(".contact-block");
+  var contactContainer = $('.contact-block');
   $(document).mouseup(function (e) {
     // if the target of the click isn't the container nor a descendant of the container
     if (
