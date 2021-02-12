@@ -261,7 +261,11 @@ $(document).ready(function () {
         );
         break;
       case '3':
-        repplyFunction(1300, 2700, 'Here are few of my recent projects: ');
+        repplyFunction(
+          1300,
+          2700,
+          'Here are few of my recent projects: <i>(scroll down)</i>'
+        );
         setTimeout(function () {
           myProjects.css('display', 'grid');
           $('.chatbox').append(myProjects);
