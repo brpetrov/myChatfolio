@@ -30,7 +30,7 @@ ul {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -154,7 +154,7 @@ iframe {
 }
 
 .call .contact-details::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -223,7 +223,7 @@ iframe {
 }
 
 .info-image {
-  width: 35%;
+  width: 30%;
   margin: 0 auto;
   border: none;
 }
@@ -742,7 +742,7 @@ iframe {
   margin: 0 0.5rem;
   border-radius: 50%;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.15s ease;
@@ -890,7 +890,7 @@ iframe {
   left: 50%;
   width: 0;
   height: 0;
-  content: "";
+  content: '';
   border: solid;
   border-width: 10px 10px 0 10px;
   border-color: transparent;
