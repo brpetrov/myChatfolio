@@ -232,7 +232,7 @@ $(document).ready(function () {
         repplyFunction(
           700,
           1800,
-          'GYM! I love lifting heavy but for the past 3 months all the gyms have been closed... 😔'
+          'GYM! I love lifting heavy but for the past year all the gyms have been closed... 😔'
         );
         break;
 
